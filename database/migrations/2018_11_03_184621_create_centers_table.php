@@ -15,6 +15,10 @@ class CreateCentersTable extends Migration
     {
         Schema::create('centers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('description', 200)->nullable();
+            $table->string('address', 200)->nullable();
+            $table->double('latitud');
+            $table->double('longitud');
             $table->timestamps();
         });
     }

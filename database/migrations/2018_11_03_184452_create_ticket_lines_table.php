@@ -15,6 +15,9 @@ class CreateTicketLinesTable extends Migration
     {
         Schema::create('ticket_lines', function (Blueprint $table) {
             $table->increments('id');
+            $table->double('line_price');
+            $table->date('fullfillmentDate');
+            $table->time('fullfilmentTime');
             $table->timestamps();
         });
     }
